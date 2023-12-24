@@ -11,7 +11,61 @@
 
 <body>
     <div class="AppHolder">
-        <div class="SideBar">
+        <div id="NowPlayingList" class="NowPlaying">
+            <h2>Now playing</h2>
+            <div class="SongList">
+                <div class="SongSlip">
+                    <p>1</p>
+                    <img src="assets/Image.png" alt="Song cover">
+                    <p>Song_name</p>
+                    <p>desc</p>
+                </div>
+                <div class="SongSlip">
+                    <p>1</p>
+                    <img src="assets/Image.png" alt="Song cover">
+                    <p>Song_name</p>
+                    <p>desc</p>
+                </div>
+                <div class="SongSlip">
+                    <p>1</p>
+                    <img src="assets/Image.png" alt="Song cover">
+                    <p>Song_name</p>
+                    <p>desc</p>
+                </div>
+                <div class="SongSlip">
+                    <p>1</p>
+                    <img src="assets/Image.png" alt="Song cover">
+                    <p>Song_name</p>
+                    <p>desc</p>
+                </div>
+                <div class="SongSlip">
+                    <p>1</p>
+                    <img src="assets/Image.png" alt="Song cover">
+                    <p>Song_name</p>
+                    <p>desc</p>
+                </div>
+                <div class="SongSlip">
+                    <p>1</p>
+                    <img src="assets/Image.png" alt="Song cover">
+                    <p>Song_name</p>
+                    <p>desc</p>
+                </div>
+                <div class="SongSlip">
+                    <p>1</p>
+                    <img src="assets/Image.png" alt="Song cover">
+                    <p>Song_name</p>
+                    <p>desc</p>
+                </div>
+                <div class="SongSlip">
+                    <p>1</p>
+                    <img src="assets/Image.png" alt="Song cover">
+                    <p>Song_name</p>
+                    <p>desc</p>
+                </div>
+            </div>
+        </div>
+        <div class="ShowSideBarButton" onclick="ShowSideBar()"></div>
+        <div class="SideBar" id="SideBarId">
             <div class="FeatureContainer">
                 <h2>Home</h2>
                 <div class="FeatureSlip">
@@ -39,7 +93,7 @@
                     <img src="assets/Icons/Song.png" alt="">
                 </div>
             </div>
-            <div class="NowPlaying">
+            <div class="PlayerControllerContainer" onclick="ShowNowPlaying()">
                 <img class="ExpandNowPlaying" src="assets/Icons/List.png" alt="">
             </div>
         </div>
