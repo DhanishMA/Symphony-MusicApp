@@ -1,0 +1,378 @@
+/* fonts */
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wdth_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Trispace';
+    src: url('../assets/fonts/Trispace/Trispace-VariableFont_wdth_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+/* animations */
+
+@keyframes slide-out {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 100;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(0%);
+        opacity: 100;
+    }
+
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.SlideOut {
+    animation: slide-in 0.5s forwards;
+}
+
+.SlideIn {
+    animation: slide-out 0.5s forwards;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+}
+
+/* default element styles */
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins';
+}
+
+section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow-x: hidden;
+}
+
+.Container {
+    max-width: 1318px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1 {
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Poppins';
+}
+
+.AppHolder {
+    display: flex;
+    flex-direction: row;
+    height: 100svh;
+}
+
+/* sidebar */
+
+.SideBar {
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.FeatureContainer {
+    border: solid;
+    flex: 1;
+    padding: 15px;
+}
+
+.FeatureContainer h2 {
+    margin: 0px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.FeatureContainer p {
+    margin: 0px;
+    font-size: 18px;
+}
+
+
+.FeatureSlip {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.FeatureSlip img {
+    height: 20px;
+    align-self: center;
+}
+
+/* currently playing */
+
+.NowPlaying {
+    border: solid;
+    width: 100%;
+    height: 150px;
+}
+
+/* app container */
+
+.AppContainer {
+    border: solid;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+/* navbar */
+
+.NavBar {
+    border: solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.NavBar p {
+    margin: 0px;
+    font-size: 20px
+}
+
+/* app contents */
+
+.AppContent {
+    border: solid;
+    flex: 1;
+    padding: 15px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* cards */
+
+.CardContainer {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 15px;
+    justify-content: start;
+}
+
+.Card {
+    z-index: -1;
+}
+
+.Card div {
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    border-radius: 12px;
+}
+
+.Card p {
+    margin: 7px;
+    font-size: 22px;
+}
+
+.CardImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.CardPlayIcon {
+    position: absolute;
+    width: 16%;
+    top: auto;
+    left: auto;
+    right: 5%;
+    bottom: 5%;
+}
+
+/* responsiveness for tablets */
+
+@media only screen and (max-width: 768px) {
+    .Card div {
+        height: 150px;
+        width: 150px;
+    }
+
+    .Card p {
+        font-size: 20px;
+    }
+
+    .CardContainer {
+        column-gap: 30px;
+        row-gap: 15px;
+    }
+}
+
+/* responsiveness for mobile phones */
+
+@media only screen and (max-width: 425px) {
+    .Card div {
+        height: 100px;
+        width: 100px;
+    }
+
+    .Card p {
+        margin: 7px;
+        font-size: 16px;
+    }
+
+    .CardContainer {
+        column-gap: 15px;
+        row-gap: 8px;
+    }
+
+}
+
+/* responsiveness for S mobile phones */
+
+@media only screen and (max-width: 320px) {
+    .CardContainer {
+        justify-content: space-evenly;
+    }
+}
+
+/* Hero section of the app */
+
+section.Hero {
+    overflow: hidden;
+}
+
+.Hero h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 68px;
+}
+
+.Hero p {
+    font-size: 15px;
+    max-width: 375px;
+    margin-top: 0px;
+    margin-bottom: 18px;
+}
+
+.Container.HeroDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.HeroTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-right: 15px;
+    padding-bottom: 30px;
+    max-width: 40%;
+}
+
+.HeroImageContainer {
+    max-width: 60%;
+    object-fit: cover;
+}
+
+
+/* responsiveness for tablets */
+
+@media only screen and (max-width: 768px) {
+
+    section.Hero {
+        padding-top: 30px;
+    }
+
+    .Container.HeroDiv {
+        flex-direction: column-reverse;
+    }
+
+    .HeroTextContainer {
+        padding-right: 0px;
+        max-width: none;
+        text-align: center;
+    }
+
+    .HeroImageContainer {
+        max-width: none;
+    }
+
+    .Hero p {
+        text-align: center;
+        max-width: none;
+    }
+
+    .Hero h1 {
+        margin-top: auto;
+    }
+}
+
+/* responsiveness for mobile phones */
+
+@media only screen and (max-width: 425px) {
+    .Hero h1 {
+        font-size: 42px;
+    }
+
+    .Hero p {
+        font-size: 12px;
+    }
+
+    .HeroImageContainer img {
+        max-height: 250px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
