@@ -171,6 +171,10 @@ p {
     border-radius: 50px;
 }
 
+.PlayerController {
+    background-color: none;
+}
+
 /* player controller */
 
 .PlayerControllerContainer {
@@ -192,6 +196,7 @@ p {
 .NowPlaying {
     display: none;
     padding: 30px;
+    padding-right: 0px;
     height: 100svh;
     width: 320px;
     background-color: rgba(255, 255, 255, 0.05);
