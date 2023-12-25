@@ -123,9 +123,10 @@ p {
     flex: 1;
     overflow: hidden;
     overflow-y: scroll;
+    
 }
 
-.FeatureContainer h2 {
+.SideBar h2 {
     margin: 0px;
     margin-top: 25px;
     margin-bottom: 30px;
