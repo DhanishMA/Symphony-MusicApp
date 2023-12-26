@@ -324,7 +324,7 @@ p {
 /* for mobile phone */
 @media only screen and (max-width: 425px) {
     .NavBar p {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .NavBar img {
