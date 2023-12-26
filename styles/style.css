@@ -377,7 +377,6 @@ section.Hero {
     align-items: start;
     padding-right: 15px;
     padding-bottom: 30px;
-    /* width: 40%; */
 }
 
 .HeroImageContainer {
@@ -403,6 +402,10 @@ section.Hero {
 
     .Hero h1 {
         font-size: 16vw;
+    }
+
+    .HeroImageContainer {
+        width: 80%;
     }
 }
 
