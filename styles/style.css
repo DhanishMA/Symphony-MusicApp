@@ -389,7 +389,22 @@ section.Hero {
     object-fit: cover;
 }
 
+/* responsivity for mobile phones */
 
+@media only screen and (max-width: 425px) {
+    .Container.HeroDiv {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .Hero p {
+        font-size: 5vw;
+    }
+
+    .Hero h1 {
+        font-size: 16vw;
+    }
+}
 
 
 
