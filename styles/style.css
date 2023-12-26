@@ -218,6 +218,17 @@ p {
     .SideBar{
         display: none;
         position: fixed;
+        top: 0%;
+        bottom: 0%;
+        left: 0%;
+        right: auto;
+
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* width: 275px; */
+        /* background-color: rgba(255, 255, 255, 0.05); */
+        /* backdrop-filter: blur(30px); */
+
     }
 
     .ShowSideBarButton {
@@ -304,7 +315,7 @@ p {
 .NavButton {
     display: flex;
     flex-direction: row;
-    column-gap: 30px;
+    column-gap: 15px;
 }
 
 /* responsivity for tab */
@@ -315,13 +326,19 @@ p {
 }
 
 /* for mobile phone */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 425px) {
     .NavBar p {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .NavBar img {
-        height: 16px;
+        height: 13px;
+    }
+}
+/* for M mobile phone */
+@media only screen and (max-width: 375px) {
+    .NavBar {
+        padding: 12px 15px;
     }
 }
 
