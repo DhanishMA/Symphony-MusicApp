@@ -94,7 +94,9 @@ h1 {
 }
 
 h2 {
+    margin: 0px;
     font-family: 'Poppins';
+    font-size: 28px;
     font-weight: 400;
 }
 
@@ -109,6 +111,13 @@ p {
     height: 100svh;
     width: 100vw;
     overflow: hidden;
+}
+
+/* for tab */
+@media only screen and (max-width: 768px) {
+    h2 {
+        font-size: 24px;
+    }
 }
 
 /* sidebar */
@@ -191,7 +200,6 @@ p {
 }
 
 /* responsivity below 1024px */
-
 @media only screen and (max-width: 1024px) {
     .SideBar {
         width: 200px;
@@ -205,9 +213,7 @@ p {
         font-size: 14px;
     }
 }
-
-/* responsivity for tablet */
-
+/* responsivity for tab */
 @media only screen and (max-width: 768px) {
     .SideBar{
         display: none;
@@ -288,6 +294,37 @@ p {
     font-size: 20px
 }
 
+.NavBar img {
+    display: none;
+    align-self: center;
+    height: 20px;
+    object-fit: cover;
+}
+
+.NavButton {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+}
+
+/* responsivity for tab */
+@media only screen and (max-width: 768px) {
+    .NavBar img {
+        display: block;
+    }
+}
+
+/* for mobile phone */
+@media only screen and (max-width: 375px) {
+    .NavBar p {
+        font-size: 16px;
+    }
+
+    .NavBar img {
+        height: 16px;
+    }
+}
+
 /* app contents */
 
 .AppContent {
@@ -306,10 +343,6 @@ p {
     column-gap: 30px;
     row-gap: 15px;
     justify-content: start;
-}
-
-.CardContainer h2 {
-    margin-top: 0px;
 }
 
 .Card {
@@ -343,6 +376,14 @@ p {
     right: 5%;
     bottom: 5%;
 }
+
+/* for mobile phone */
+@media only screen and (max-width: 375px) {
+    .Card p {
+        font-size: 16px;
+    }
+}
+
 /* Hero section of the app */
 
 section.Hero {
@@ -389,7 +430,6 @@ section.Hero {
 }
 
 /* responsivity for mobile phones */
-
 @media only screen and (max-width: 425px) {
     .Container.HeroDiv {
         flex-direction: column-reverse;
