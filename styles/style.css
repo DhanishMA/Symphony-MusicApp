@@ -73,6 +73,7 @@ body {
     color: whitesmoke;
     font-family: 'Poppins';
     background: radial-gradient(221.6% 141.42% at 0% 0%, rgba(0, 26, 124, 0.88) 0%, rgba(115, 31, 204, 0.66) 43.41%, #7A0B34 100%);
+    background-attachment: fixed;
 }
 
 section {
@@ -105,8 +106,9 @@ p {
 .AppHolder {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: 100svh;
     width: 100vw;
+    overflow: hidden;
 }
 
 /* sidebar */
@@ -131,12 +133,12 @@ p {
     margin-top: 25px;
     margin-bottom: 30px;
     padding-left: 15px;
-    font-size: 32px;
+    font-size: 48px;
 }
 
 .FeatureContainer p {
     margin: 0px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .FeatureSlip {
@@ -171,10 +173,6 @@ p {
     border-radius: 50px;
 }
 
-.PlayerController {
-    background-color: none;
-}
-
 /* player controller */
 
 .PlayerControllerContainer {
@@ -191,6 +189,36 @@ p {
     margin: 12px 15px;
     width: 24px;
 }
+
+/* responsivity below 1024px */
+
+@media only screen and (max-width: 1024px) {
+    .SideBar {
+        width: 200px;
+    }
+
+    .SideBar h2 {
+        font-size: 36px;
+    }
+
+    .FeatureContainer p{
+        font-size: 14px;
+    }
+}
+
+/* responsivity for tablet */
+
+@media only screen and (max-width: 768px) {
+    .SideBar{
+        display: none;
+        position: fixed;
+    }
+
+    .ShowSideBarButton {
+        display: block;
+    }
+}
+
 /* holds current queue of playing songs */
 
 .NowPlaying {
@@ -241,6 +269,7 @@ p {
 .AppContainer {
     display: flex;
     flex: 1;
+    width: 0;
     flex-direction: column;
 }
 
@@ -314,67 +343,20 @@ p {
     right: 5%;
     bottom: 5%;
 }
-
-/* responsiveness for tablets */
-
-/* @media only screen and (max-width: 768px) {
-    .Card div {
-        height: 150px;
-        width: 150px;
-    }
-
-    .Card p {
-        font-size: 20px;
-    }
-
-    .CardContainer {
-        column-gap: 30px;
-        row-gap: 15px;
-    }
-} */
-
-/* responsiveness for mobile phones */
-
-/* @media only screen and (max-width: 425px) {
-    .Card div {
-        height: 100px;
-        width: 100px;
-    }
-
-    .Card p {
-        margin: 7px;
-        font-size: 16px;
-    }
-
-    .CardContainer {
-        column-gap: 15px;
-        row-gap: 8px;
-    }
-
-} */
-
-/* responsiveness for S mobile phones */
-
-/* @media only screen and (max-width: 320px) {
-    .CardContainer {
-        justify-content: space-evenly;
-    }
-} */
-
 /* Hero section of the app */
 
 section.Hero {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .Hero h1 {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 68px;
+    font-size: 6vw;
 }
 
 .Hero p {
-    font-size: 24px;
+    font-size: 2vw;
     align-self: end;
     max-width: 375px;
     margin-top: 0px;
@@ -384,8 +366,7 @@ section.Hero {
 .Container.HeroDiv {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
+    justify-content: space-evenly;
     flex-wrap: nowrap;
 }
 
@@ -396,73 +377,17 @@ section.Hero {
     align-items: start;
     padding-right: 15px;
     padding-bottom: 30px;
-    max-width: 40%;
+    /* width: 40%; */
 }
 
 .HeroImageContainer {
-    max-width: 60%;
-    height: 450px;
+    width: 55%;
 }
 
 .HeroImageContainer img {
-    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
-
-
-/* responsiveness for tablets */
-
-/* @media only screen and (max-width: 768px) {
-
-    section.Hero {
-        padding-top: 30px;
-    }
-
-    .Container.HeroDiv {
-        flex-direction: column-reverse;
-    }
-
-    .HeroTextContainer {
-        padding-right: 0px;
-        max-width: none;
-        text-align: center;
-    }
-
-    .HeroImageContainer {
-        max-width: none;
-    }
-
-    .Hero p {
-        text-align: center;
-        max-width: none;
-    }
-
-    .Hero h1 {
-        margin-top: auto;
-    }
-} */
-
-/* responsiveness for mobile phones */
-
-/* @media only screen and (max-width: 425px) {
-    .Hero h1 {
-        font-size: 42px;
-    }
-
-    .Hero p {
-        font-size: 12px;
-    }
-
-    .HeroImageContainer img {
-        max-height: 250px;
-    }
-
-} */
-
-
-
-
-
 
 
 
