@@ -1,17 +1,17 @@
-CssClass = "SlideOut";
+NowPlyingAnim = "SlideOutRight";
 
 function ShowNowPlaying() {
   var div = document.getElementById("NowPlayingList");
   div.style.display = "block"
-  if (CssClass === "SlideOut") {
-    div.classList.remove("SlideOut");
-    div.classList.toggle("SlideIn");
-    CssClass = "SlideIn";
+  if (NowPlyingAnim === "SlideOutRight") {
+    div.classList.remove("SlideOutRight");
+    div.classList.toggle("SlideInRight");
+    NowPlyingAnim = "SlideInRight";
   } 
   else {
-    div.classList.remove("SlideIn");
-    div.classList.toggle("SlideOut");
-    CssClass = "SlideOut";
+    div.classList.remove("SlideInRight");
+    div.classList.toggle("SlideOutRight");
+    NowPlyingAnim = "SlideOutRight";
   }
 
 }

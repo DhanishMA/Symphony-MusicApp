@@ -17,7 +17,7 @@
 
 /* animations */
 
-@keyframes slide-out {
+@keyframes slide-in-right {
     from {
         transform: translateX(100%);
         opacity: 0;
@@ -29,7 +29,7 @@
     }
 }
 
-@keyframes slide-in {
+@keyframes slide-out-right {
     from {
         transform: translateX(0%);
         opacity: 100;
@@ -41,12 +41,12 @@
     }
 }
 
-.SlideOut {
-    animation: slide-in 0.5s forwards;
+.SlideOutRight {
+    animation: slide-out-right 0.5s forwards;
 }
 
-.SlideIn {
-    animation: slide-out 0.5s forwards;
+.SlideInRight {
+    animation: slide-in-right 0.5s forwards;
 }
 
 /* Scrollbar */
