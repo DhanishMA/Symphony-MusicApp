@@ -17,6 +17,7 @@
 
 /* animations */
 
+/* animation for nowplaying */
 @keyframes slide-in-right {
     from {
         transform: translateX(100%);
@@ -47,6 +48,39 @@
 
 .SlideInRight {
     animation: slide-in-right 0.5s forwards;
+}
+
+/* animations for sidebar */
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 100;
+    }
+}
+
+@keyframes slide-out-left {
+    from {
+        transform: translateX(0%);
+        opacity: 100;
+    }
+
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.SlideOutLeft {
+    animation: slide-out-left 0.5s forwards;
+}
+
+.SlideInLeft {
+    animation: slide-in-left 0.5s forwards;
 }
 
 /* Scrollbar */

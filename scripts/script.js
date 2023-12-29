@@ -1,4 +1,5 @@
 NowPlyingAnim = "SlideOutRight";
+SideBarAnim = "SlideOutLeft";
 
 function ShowNowPlaying() {
   var div = document.getElementById("NowPlayingList");
@@ -18,17 +19,31 @@ function ShowNowPlaying() {
 
 function ShowSideBar() {
   var div = document.getElementById("SideBarId");
-  console.log('function called');
+  div.style.display = "block"
+  if (SideBarAnim === "SlideOutLeft") {
+    div.classList.remove("SlideOutLeft");
+    div.classList.toggle("SlideInLeft");
+    SideBarAnim = "SlideInLeft";
+  } 
+  else {
+    div.classList.remove("SlideInLeft");
+    div.classList.toggle("SlideOutLeft");
+    SideBarAnim = "SlideOutLeft";
+  }
 
-  if (div.style.display === "block")
-  {
-    div.style.display = "none";
-    console.log('if');
-  }
-  else
-  {
-    div.style.display = "block";
-    console.log('else');
-  }
+
+  // var div = document.getElementById("SideBarId");
+  // console.log('function called');
+
+  // if (div.style.display === "block")
+  // {
+  //   div.style.display = "none";
+  //   console.log('if');
+  // }
+  // else
+  // {
+  //   div.style.display = "block";
+  //   console.log('else');
+  // }
 }
 
